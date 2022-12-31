@@ -1,0 +1,431 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+/*shopping cart icon*/
+.material-symbols-outlined{
+    color:white;
+    flex: none;
+    position: absolute;
+    right: 1em;
+    cursor: pointer;
+}
+
+/*landscape topbar*/
+.topbar{
+    width: 100%;
+    height: 7.5vh;
+    min-height: 3rem;
+    background-color: black;
+    border-bottom:.5em solid rgb(41, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topbar .links{
+    text-decoration: none;
+    color: white;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    letter-spacing: 1.1;
+    font-size: 20px; /* use clamp later*/
+    margin: 50px 20px;
+}
+
+.topbar .links:hover{
+    color: rgb(196, 196, 196);
+}
+
+.dropdown{
+    width: 100%;
+    height: 20vh;
+    min-height: 120px;
+    background-color: black;
+    border-bottom:.5em solid rgb(41, 41, 41);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dropdown .drop-links{
+    text-decoration: none;
+    color: white;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    /*letter-spacing: 1.1;*/
+    font-size: 20px; /* use clamp later*/
+    height: 5vh;
+    min-height: 30px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*portrait dropdown menu*/
+.toggle-button{
+    position: absolute;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    /*might need to change*/
+    width: 2.5em;
+    height: 1.5em;
+}
+
+.toggle-button .bar{
+    height: .2em;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*button portrait*/
+.main .button{
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(41, 41, 41);
+    padding: 2.5vw 7vw;
+    text-align: center;
+    display: none;
+    border-radius: 1em;
+    margin: 1em 0 0 0;
+}
+
+.main a:hover{
+    color: rgb(196, 196, 196);
+}
+
+.header h1{
+    text-align: center;
+    margin: 2em 0;
+    font-size: 2.5em;
+}
+
+.promotions{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/*button for promotions while in landscape*/
+.promotions .button{
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(41, 41, 41);
+    padding: 1.5vw 3vw;
+    text-align: center;
+    border-radius: 1em;
+    margin: 0 10% 0 10%;
+}
+
+.promotions a:hover{
+    color: rgb(196, 196, 196);
+}
+
+.item{
+    height: 25vh;
+    min-height: 200px;
+    width: 70vw;
+    /*important for gradient to work*/
+    background: linear-gradient(white, white) padding-box, 
+    linear-gradient(to bottom right, blue, cyan) border-box;
+    border: .2em solid transparent;
+    border-radius: 2em;
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.item .productTitle{
+    letter-spacing: 1.1;
+    font-size: 2em; /* use clamp later*/
+    margin: .5em 0 0 0;
+}
+
+.item p1{
+    letter-spacing: 1.1;
+    font-size: 1.2em; /* use clamp later*/
+    margin: 1em 0 0 .5em;
+}
+
+.item .productPrice{
+    display: none;
+}
+/*media-query so paragraph does not push image too much*/
+@media(max-width: 1200px){
+.item p1{
+    max-width: 400px;
+}
+}
+
+.item .productImage{
+    min-width: 250px;
+    width: 25%;
+    float: right;
+    margin: 0 0 0 0;
+}
+
+/*button landscape*/
+.item .button{
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(41, 41, 41);
+    padding: 1vw 2vw;
+    text-align: center;
+    display: inline-block;
+    border-radius: 1em;
+    margin: 1em 0 0 0;
+}
+
+.items a:hover{
+    color: rgb(196, 196, 196);
+}
+
+/*for promotional items below main items*/
+.promo{
+    width: 25vw;
+    height: 30vh;
+    min-height: 250px;
+}
+.promo .productTitle{
+    font-size: 1.5em;
+    margin: 0 0 0 .25em;
+}
+.promo .productPrice{
+    display: none;
+}
+.promo .productImage {
+    margin: 1em 0 0 0;
+    min-width: 0px;
+}
+
+.footer{
+    height: 25vh;
+    width: 100%;
+    background: black;
+    border-top: .5em solid rgb(41, 41, 41);
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*font-awesome icons*/
+.fa-brands {
+    padding: none;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .fa-brands:hover {
+    color: cyan;
+  }
+  
+  .fa-facebook-f {
+    color: white;
+  }
+  
+  .fa-instagram {
+    color: white;
+  }
+  
+  .fa-twitter {
+    color: white;
+  }
+  
+  .fa-linkedin-in {
+    color: white;
+  }
+  
+  .fa-youtube {
+    color: white;
+  }
+
+  /*shopping cart*/
+.shoppingMenu{
+    height: 75vh;
+    width: 30%;
+    min-width: 250px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: 0.3s;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shoppingMenu.active{
+    display: flex;
+}
+
+.cart-remove{
+    font-size: 24px;
+    cursor: pointer; 
+}
+
+.cart-content{
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.shoppingMenu .button{
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(41, 41, 41);
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    border-radius: 1em;
+    margin: 0 10% 0 10%;
+    cursor: pointer;
+}
+
+.shoppingMenu i{
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.shoppingMenu > i{
+    font-size: 3em;
+}
+
+.shoppingMenu i:hover{
+    color: rgb(196, 196, 196);
+}
+
+.cart-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.cart-box img{
+    max-height: 200px;
+    max-width: 200px;
+    float: right;
+}
+
+.detail-box{
+    text-align: center;
+}
+
+.total{
+    display: flex;
+    margin: 1em;
+}
+
+.total-title{
+    margin-right: .5em;
+    font-size: 2em;
+}
+
+.total-price{
+    font-size: 2em;
+}
+
+.cart-quantity{
+    border-radius: 1em;
+    border: 2px solid black;
+    height: 2em;
+    width: 100%;
+}
+
+/* fix close button size*/
+/*media query changes display when potrait*/
+@media(max-width: 45em){
+    /*query for shooping cart icon*/
+    .material-symbols-outlined{
+        left: 1em;
+    }
+    /*query for hamburger menu*/
+    .toggle-button{
+        display: flex;
+    }
+    .topbar .links{
+        display: none;
+    }
+    .topbar{
+        height: 10vh;
+    }
+    .dropdown.active{
+        display: flex;
+    }
+    /*query for item section*/
+    .item{
+        height: 50vh;
+        min-height: 350px;
+    }
+    .item .productImage{
+        float: none;
+        width: 45%;
+        max-width: 45%;
+        min-width: 0;
+    }
+    /*query for button*/
+    /*not needed anymore
+    .main .button{
+        display: inline-block;
+    }
+    */
+    .item .button{
+        display: none;
+    }
+
+    .promo{
+        width: 50vw;
+    }
+
+    .promotions .button{
+        display: none;
+    }
+
+    .promo .productPrice{
+        display: inline-block;
+    }
+
+    .shoppingMenu{
+        left: 0;
+    }
+    
+    .shoppingMenu > i{
+        font-size: 4em;
+    }
+    
+    .imageButton{
+        cursor: pointer;
+    }
+}
