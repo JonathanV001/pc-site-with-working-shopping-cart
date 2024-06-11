@@ -12,3 +12,6 @@ Project is created with:
 * HTML
 * CSS
 
+## How to Build
+Copy " git clone https://github.com/JonathanV001/pc-site-with-working-shopping-cart.git" into terminal in vs code.
+Make sure Live Server extension is installed and click go live
